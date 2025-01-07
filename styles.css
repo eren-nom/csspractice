@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: pink;
+    background-color: rgb(247, 222, 226);
 }
 
 h1 {
@@ -85,7 +85,7 @@ ul.nav li a {
     height: 40px;
     border: 1px solid black;
     padding: 10px;
-    background-color: paleturquoise
+    background-color: rgb(153, 141, 163);
 }
 
 .grid-practice {
@@ -115,7 +115,7 @@ ul.nav li a {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    background-color: plum;
+    background-color: rgb(153, 141, 163);
     height: 40px;
     border: 1px solid black;
     text-align: center;
@@ -124,11 +124,20 @@ ul.nav li a {
 
 
 footer {
-    background-color: rgb(41, 35, 51);
+    background-color: rgb(25, 26, 58);
     color: beige;
     margin: 0px;
     text-align: center;
     padding: 30px;
     margin-top: 80px;
     line-height: 2rem;
+}
+
+footer a {
+    color: beige;
+}
+
+footer a:hover {
+    color: rgb(149, 148, 150); 
+
 }
