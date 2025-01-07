@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: pink;
+}
+
+h1 {
+    background-color: rgb(67, 49, 83);
+    color: rgb(238, 236, 238);
+    text-align: center;
+    padding: 50px 0;
+    font-size: 3rem;
+}
+
+h2 {
+    background-color: rgb(153, 141, 163);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 30px 0;
+}
+
+nav {  
+    margin: 0;
+    border: 3px;
+    padding: 0;
+    background-color: rgb(25, 26, 58);
+}
+
+ul.nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100px;
+    list-style: none;
+    justify-content: center;
+    
+}
+
+ul.nav li {
+    margin: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+ul.nav li a {
+    color: beige;
+}
+
+.flexbox-practice {
+    display: flex;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center; 
+}
+
+.flexbox {
+    display: flex;           
+    flex-wrap: wrap;         
+    padding: 20px;          
+    margin: 0;               
+    list-style: none;       
+    gap: 15px;       
+    justify-content: center;  
+    width: 100%; 
+    max-width: 580px;
+}
+
+.flexbox .square {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: paleturquoise
+}
+
+.grid-practice {
+    display: flex;
+    justify-content: center;
+    width: 85%; 
+    justify-content: center;
+    margin: 0px auto;
+    padding: 20px;
+    justify-content: center;
+}
+
+.grid {
+    display: grid; 
+    flex-wrap: wrap;
+    gap: 20px; 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr)); 
+    max-width: calc(10 * 40px + 9 * 20px); 
+
+}
+
+.grid .square {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: plum;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+
+footer {
+    background-color: rgb(41, 35, 51);
+    color: beige;
+    margin: 0px;
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
+    line-height: 2rem;
+}
