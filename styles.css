@@ -12,16 +12,18 @@ body {
     background-color: rgb(247, 222, 226);
 }
 
+/*header*/
+
 h1 {
-    background-color: rgb(67, 49, 83);
-    color: rgb(238, 236, 238);
+    background-color: rgb(110, 90, 128);
+    color: beige;
     text-align: center;
     padding: 50px 0;
     font-size: 3rem;
 }
 
 h2 {
-    background-color: rgb(153, 141, 163);
+    background-color: rgb(181, 173, 189);
     text-align: center;
     padding: 20px 0;
     font-size: 2rem;
@@ -34,10 +36,9 @@ h3 {
     margin: 30px 0;
 }
 
+/*nav*/
+
 nav {  
-    margin: 0;
-    border: 3px;
-    padding: 0;
     background-color: rgb(25, 26, 58);
 }
 
@@ -60,18 +61,20 @@ ul.nav li a {
     color: beige;
 }
 
-.flexbox-practice {
+/*flexbox*/
+
+.flexbox-practice, .grid-practice {
     display: flex;
     width: 80%;
-    text-align: center;
     margin: 0 auto;
     justify-content: center; 
-}
+    padding: 20px;
+    font-size: 1.2rem;
+    }
 
 .flexbox {
     display: flex;           
-    flex-wrap: wrap;         
-    padding: 20px;          
+    flex-wrap: wrap;                
     margin: 0;               
     list-style: none;       
     gap: 15px;       
@@ -81,34 +84,24 @@ ul.nav li a {
 }
 
 .flexbox .square {
+    flex-shrink: 1; /* Allows the flex item to shrink */
     width: 40px;
     height: 40px;
     border: 1px solid black;
     padding: 10px;
-    background-color: rgb(153, 141, 163);
+    background-color:  rgb(181, 173, 189);
 }
 
-.grid-practice {
-    display: flex;
-    justify-content: center;
-    width: 85%; 
-    justify-content: center;
-    margin: 0px auto;
-    padding: 20px;
-    justify-content: center;
-}
+/*grid*/
 
 .grid {
     display: grid; 
-    flex-wrap: wrap;
-    gap: 20px; 
-    list-style: none; 
+    gap: 15px; 
     padding: 0;
     margin: 0;
     width: 100%; 
     grid-template-columns: repeat(auto-fit, minmax(40px, 1fr)); 
-    max-width: calc(10 * 40px + 9 * 20px); 
-
+    max-width: calc(10 * 40px + 9 * 15px); 
 }
 
 .grid .square {
@@ -119,14 +112,14 @@ ul.nav li a {
     height: 40px;
     border: 1px solid black;
     text-align: center;
+    max-width: 40px;
 }
 
-
+/*footer*/
 
 footer {
     background-color: rgb(25, 26, 58);
     color: beige;
-    margin: 0px;
     text-align: center;
     padding: 30px;
     margin-top: 80px;
@@ -141,3 +134,113 @@ footer a:hover {
     color: rgb(149, 148, 150); 
 
 }
+
+/*media queries for very small screens*/
+
+@media only screen and (max-width: 350px) {
+    h1 {
+        font-size: 1.5rem;
+        padding: 20px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 1rem;
+        padding: 5px;
+        margin: 0;
+    }
+
+    nav, ul.nav, ul.nav li {
+        display: flex;
+        flex-direction: column;
+        padding: 1px;
+        font-size: 0.8rem;
+        line-height: 0rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    .grid {
+        gap: 5px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px;
+        margin-top: 20px;
+        line-height: 2rem;
+    }
+    
+}
+
+/*media queries for large screens*/
+
+@media only screen and (min-width: 1500px) {
+    h1 {
+        font-size: 8rem;
+        padding: 80px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 4rem;
+        padding: 50px;
+        margin: 0;
+    }
+
+    ul.nav, ul.nav li {
+        margin-right: 40px;
+        padding: 15px;
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 4rem;
+    }
+
+    .flexbox-practice, .grid-practice {
+        font-size: 2rem;
+    }
+    
+    .flexbox {
+        padding: 40px;                      
+        gap: 20px;       
+        max-width: 1000px;
+    }
+    
+    .flexbox .square {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        padding: 20px;
+
+    }
+
+    .grid {
+        gap: 20px; 
+        padding: 0;
+        margin: 0;
+        width: 100%; 
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); 
+        max-width: calc(10 * 70px + 9 * 20px); 
+    }
+    
+    .grid .square {
+        height: 70px;
+        max-width: 70px;
+    }
+    
+    footer {
+        font-size: 3rem;
+        padding: 50px;
+        margin-top: 100px;
+        line-height: 5rem;
+    }
+
+}
+
